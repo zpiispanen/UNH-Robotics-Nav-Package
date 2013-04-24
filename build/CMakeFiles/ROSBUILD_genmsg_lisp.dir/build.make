@@ -42,9 +42,39 @@ CMAKE_BINARY_DIR = /home/virus/fuerte_workspace/sandbox/goal_sender/build
 # Include the progress variables for this target.
 include CMakeFiles/ROSBUILD_genmsg_lisp.dir/progress.make
 
-CMakeFiles/ROSBUILD_genmsg_lisp:
+CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/DestinationList.lisp
+CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
+CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_DestinationList.lisp
+
+../msg_gen/lisp/DestinationList.lisp: ../msg/DestinationList.msg
+../msg_gen/lisp/DestinationList.lisp: /opt/ros/fuerte/share/roslisp/rosbuild/scripts/genmsg_lisp.py
+../msg_gen/lisp/DestinationList.lisp: /opt/ros/fuerte/share/roslib/bin/gendeps
+../msg_gen/lisp/DestinationList.lisp: /opt/ros/fuerte/share/geometry_msgs/msg/Point.msg
+../msg_gen/lisp/DestinationList.lisp: ../manifest.xml
+../msg_gen/lisp/DestinationList.lisp: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
+../msg_gen/lisp/DestinationList.lisp: /opt/ros/fuerte/share/nav_msgs/manifest.xml
+../msg_gen/lisp/DestinationList.lisp: /opt/ros/fuerte/share/roslib/manifest.xml
+../msg_gen/lisp/DestinationList.lisp: /opt/ros/fuerte/share/std_msgs/manifest.xml
+../msg_gen/lisp/DestinationList.lisp: /opt/ros/fuerte/share/actionlib_msgs/manifest.xml
+../msg_gen/lisp/DestinationList.lisp: /opt/ros/fuerte/stacks/navigation/move_base_msgs/manifest.xml
+../msg_gen/lisp/DestinationList.lisp: /opt/ros/fuerte/share/roslang/manifest.xml
+../msg_gen/lisp/DestinationList.lisp: /opt/ros/fuerte/share/roscpp/manifest.xml
+../msg_gen/lisp/DestinationList.lisp: /opt/ros/fuerte/share/rospy/manifest.xml
+../msg_gen/lisp/DestinationList.lisp: /opt/ros/fuerte/share/rostest/manifest.xml
+../msg_gen/lisp/DestinationList.lisp: /opt/ros/fuerte/share/actionlib/manifest.xml
+../msg_gen/lisp/DestinationList.lisp: /opt/ros/fuerte/stacks/navigation/move_base_msgs/msg_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/virus/fuerte_workspace/sandbox/goal_sender/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/lisp/DestinationList.lisp, ../msg_gen/lisp/_package.lisp, ../msg_gen/lisp/_package_DestinationList.lisp"
+	/opt/ros/fuerte/share/roslisp/rosbuild/scripts/genmsg_lisp.py /home/virus/fuerte_workspace/sandbox/goal_sender/msg/DestinationList.msg
+
+../msg_gen/lisp/_package.lisp: ../msg_gen/lisp/DestinationList.lisp
+
+../msg_gen/lisp/_package_DestinationList.lisp: ../msg_gen/lisp/DestinationList.lisp
 
 ROSBUILD_genmsg_lisp: CMakeFiles/ROSBUILD_genmsg_lisp
+ROSBUILD_genmsg_lisp: ../msg_gen/lisp/DestinationList.lisp
+ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
+ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_DestinationList.lisp
 ROSBUILD_genmsg_lisp: CMakeFiles/ROSBUILD_genmsg_lisp.dir/build.make
 .PHONY : ROSBUILD_genmsg_lisp
 

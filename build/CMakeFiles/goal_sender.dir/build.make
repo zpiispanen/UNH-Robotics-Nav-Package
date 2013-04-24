@@ -46,6 +46,78 @@ include CMakeFiles/goal_sender.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/goal_sender.dir/flags.make
 
+CMakeFiles/goal_sender.dir/Landmark.o: CMakeFiles/goal_sender.dir/flags.make
+CMakeFiles/goal_sender.dir/Landmark.o: ../Landmark.cpp
+CMakeFiles/goal_sender.dir/Landmark.o: ../manifest.xml
+CMakeFiles/goal_sender.dir/Landmark.o: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
+CMakeFiles/goal_sender.dir/Landmark.o: /opt/ros/fuerte/share/nav_msgs/manifest.xml
+CMakeFiles/goal_sender.dir/Landmark.o: /opt/ros/fuerte/share/roslib/manifest.xml
+CMakeFiles/goal_sender.dir/Landmark.o: /opt/ros/fuerte/share/std_msgs/manifest.xml
+CMakeFiles/goal_sender.dir/Landmark.o: /opt/ros/fuerte/share/actionlib_msgs/manifest.xml
+CMakeFiles/goal_sender.dir/Landmark.o: /opt/ros/fuerte/stacks/navigation/move_base_msgs/manifest.xml
+CMakeFiles/goal_sender.dir/Landmark.o: /opt/ros/fuerte/share/roslang/manifest.xml
+CMakeFiles/goal_sender.dir/Landmark.o: /opt/ros/fuerte/share/roscpp/manifest.xml
+CMakeFiles/goal_sender.dir/Landmark.o: /opt/ros/fuerte/share/rospy/manifest.xml
+CMakeFiles/goal_sender.dir/Landmark.o: /opt/ros/fuerte/share/rostest/manifest.xml
+CMakeFiles/goal_sender.dir/Landmark.o: /opt/ros/fuerte/share/actionlib/manifest.xml
+CMakeFiles/goal_sender.dir/Landmark.o: /opt/ros/fuerte/stacks/navigation/move_base_msgs/msg_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/virus/fuerte_workspace/sandbox/goal_sender/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/goal_sender.dir/Landmark.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/goal_sender.dir/Landmark.o -c /home/virus/fuerte_workspace/sandbox/goal_sender/Landmark.cpp
+
+CMakeFiles/goal_sender.dir/Landmark.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/goal_sender.dir/Landmark.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/virus/fuerte_workspace/sandbox/goal_sender/Landmark.cpp > CMakeFiles/goal_sender.dir/Landmark.i
+
+CMakeFiles/goal_sender.dir/Landmark.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/goal_sender.dir/Landmark.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/virus/fuerte_workspace/sandbox/goal_sender/Landmark.cpp -o CMakeFiles/goal_sender.dir/Landmark.s
+
+CMakeFiles/goal_sender.dir/Landmark.o.requires:
+.PHONY : CMakeFiles/goal_sender.dir/Landmark.o.requires
+
+CMakeFiles/goal_sender.dir/Landmark.o.provides: CMakeFiles/goal_sender.dir/Landmark.o.requires
+	$(MAKE) -f CMakeFiles/goal_sender.dir/build.make CMakeFiles/goal_sender.dir/Landmark.o.provides.build
+.PHONY : CMakeFiles/goal_sender.dir/Landmark.o.provides
+
+CMakeFiles/goal_sender.dir/Landmark.o.provides.build: CMakeFiles/goal_sender.dir/Landmark.o
+
+CMakeFiles/goal_sender.dir/DestinationManager.o: CMakeFiles/goal_sender.dir/flags.make
+CMakeFiles/goal_sender.dir/DestinationManager.o: ../DestinationManager.cpp
+CMakeFiles/goal_sender.dir/DestinationManager.o: ../manifest.xml
+CMakeFiles/goal_sender.dir/DestinationManager.o: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
+CMakeFiles/goal_sender.dir/DestinationManager.o: /opt/ros/fuerte/share/nav_msgs/manifest.xml
+CMakeFiles/goal_sender.dir/DestinationManager.o: /opt/ros/fuerte/share/roslib/manifest.xml
+CMakeFiles/goal_sender.dir/DestinationManager.o: /opt/ros/fuerte/share/std_msgs/manifest.xml
+CMakeFiles/goal_sender.dir/DestinationManager.o: /opt/ros/fuerte/share/actionlib_msgs/manifest.xml
+CMakeFiles/goal_sender.dir/DestinationManager.o: /opt/ros/fuerte/stacks/navigation/move_base_msgs/manifest.xml
+CMakeFiles/goal_sender.dir/DestinationManager.o: /opt/ros/fuerte/share/roslang/manifest.xml
+CMakeFiles/goal_sender.dir/DestinationManager.o: /opt/ros/fuerte/share/roscpp/manifest.xml
+CMakeFiles/goal_sender.dir/DestinationManager.o: /opt/ros/fuerte/share/rospy/manifest.xml
+CMakeFiles/goal_sender.dir/DestinationManager.o: /opt/ros/fuerte/share/rostest/manifest.xml
+CMakeFiles/goal_sender.dir/DestinationManager.o: /opt/ros/fuerte/share/actionlib/manifest.xml
+CMakeFiles/goal_sender.dir/DestinationManager.o: /opt/ros/fuerte/stacks/navigation/move_base_msgs/msg_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/virus/fuerte_workspace/sandbox/goal_sender/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/goal_sender.dir/DestinationManager.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/goal_sender.dir/DestinationManager.o -c /home/virus/fuerte_workspace/sandbox/goal_sender/DestinationManager.cpp
+
+CMakeFiles/goal_sender.dir/DestinationManager.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/goal_sender.dir/DestinationManager.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/virus/fuerte_workspace/sandbox/goal_sender/DestinationManager.cpp > CMakeFiles/goal_sender.dir/DestinationManager.i
+
+CMakeFiles/goal_sender.dir/DestinationManager.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/goal_sender.dir/DestinationManager.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/virus/fuerte_workspace/sandbox/goal_sender/DestinationManager.cpp -o CMakeFiles/goal_sender.dir/DestinationManager.s
+
+CMakeFiles/goal_sender.dir/DestinationManager.o.requires:
+.PHONY : CMakeFiles/goal_sender.dir/DestinationManager.o.requires
+
+CMakeFiles/goal_sender.dir/DestinationManager.o.provides: CMakeFiles/goal_sender.dir/DestinationManager.o.requires
+	$(MAKE) -f CMakeFiles/goal_sender.dir/build.make CMakeFiles/goal_sender.dir/DestinationManager.o.provides.build
+.PHONY : CMakeFiles/goal_sender.dir/DestinationManager.o.provides
+
+CMakeFiles/goal_sender.dir/DestinationManager.o.provides.build: CMakeFiles/goal_sender.dir/DestinationManager.o
+
 CMakeFiles/goal_sender.dir/Goal.o: CMakeFiles/goal_sender.dir/flags.make
 CMakeFiles/goal_sender.dir/Goal.o: ../Goal.cpp
 CMakeFiles/goal_sender.dir/Goal.o: ../manifest.xml
@@ -61,7 +133,7 @@ CMakeFiles/goal_sender.dir/Goal.o: /opt/ros/fuerte/share/rospy/manifest.xml
 CMakeFiles/goal_sender.dir/Goal.o: /opt/ros/fuerte/share/rostest/manifest.xml
 CMakeFiles/goal_sender.dir/Goal.o: /opt/ros/fuerte/share/actionlib/manifest.xml
 CMakeFiles/goal_sender.dir/Goal.o: /opt/ros/fuerte/stacks/navigation/move_base_msgs/msg_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/virus/fuerte_workspace/sandbox/goal_sender/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/virus/fuerte_workspace/sandbox/goal_sender/build/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/goal_sender.dir/Goal.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/goal_sender.dir/Goal.o -c /home/virus/fuerte_workspace/sandbox/goal_sender/Goal.cpp
 
@@ -97,7 +169,7 @@ CMakeFiles/goal_sender.dir/GoalManager.o: /opt/ros/fuerte/share/rospy/manifest.x
 CMakeFiles/goal_sender.dir/GoalManager.o: /opt/ros/fuerte/share/rostest/manifest.xml
 CMakeFiles/goal_sender.dir/GoalManager.o: /opt/ros/fuerte/share/actionlib/manifest.xml
 CMakeFiles/goal_sender.dir/GoalManager.o: /opt/ros/fuerte/stacks/navigation/move_base_msgs/msg_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/virus/fuerte_workspace/sandbox/goal_sender/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/virus/fuerte_workspace/sandbox/goal_sender/build/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/goal_sender.dir/GoalManager.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/goal_sender.dir/GoalManager.o -c /home/virus/fuerte_workspace/sandbox/goal_sender/GoalManager.cpp
 
@@ -133,7 +205,7 @@ CMakeFiles/goal_sender.dir/main.o: /opt/ros/fuerte/share/rospy/manifest.xml
 CMakeFiles/goal_sender.dir/main.o: /opt/ros/fuerte/share/rostest/manifest.xml
 CMakeFiles/goal_sender.dir/main.o: /opt/ros/fuerte/share/actionlib/manifest.xml
 CMakeFiles/goal_sender.dir/main.o: /opt/ros/fuerte/stacks/navigation/move_base_msgs/msg_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/virus/fuerte_workspace/sandbox/goal_sender/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/virus/fuerte_workspace/sandbox/goal_sender/build/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/goal_sender.dir/main.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/goal_sender.dir/main.o -c /home/virus/fuerte_workspace/sandbox/goal_sender/main.cpp
 
@@ -156,6 +228,8 @@ CMakeFiles/goal_sender.dir/main.o.provides.build: CMakeFiles/goal_sender.dir/mai
 
 # Object files for target goal_sender
 goal_sender_OBJECTS = \
+"CMakeFiles/goal_sender.dir/Landmark.o" \
+"CMakeFiles/goal_sender.dir/DestinationManager.o" \
 "CMakeFiles/goal_sender.dir/Goal.o" \
 "CMakeFiles/goal_sender.dir/GoalManager.o" \
 "CMakeFiles/goal_sender.dir/main.o"
@@ -163,6 +237,8 @@ goal_sender_OBJECTS = \
 # External object files for target goal_sender
 goal_sender_EXTERNAL_OBJECTS =
 
+../bin/goal_sender: CMakeFiles/goal_sender.dir/Landmark.o
+../bin/goal_sender: CMakeFiles/goal_sender.dir/DestinationManager.o
 ../bin/goal_sender: CMakeFiles/goal_sender.dir/Goal.o
 ../bin/goal_sender: CMakeFiles/goal_sender.dir/GoalManager.o
 ../bin/goal_sender: CMakeFiles/goal_sender.dir/main.o
@@ -175,6 +251,8 @@ goal_sender_EXTERNAL_OBJECTS =
 CMakeFiles/goal_sender.dir/build: ../bin/goal_sender
 .PHONY : CMakeFiles/goal_sender.dir/build
 
+CMakeFiles/goal_sender.dir/requires: CMakeFiles/goal_sender.dir/Landmark.o.requires
+CMakeFiles/goal_sender.dir/requires: CMakeFiles/goal_sender.dir/DestinationManager.o.requires
 CMakeFiles/goal_sender.dir/requires: CMakeFiles/goal_sender.dir/Goal.o.requires
 CMakeFiles/goal_sender.dir/requires: CMakeFiles/goal_sender.dir/GoalManager.o.requires
 CMakeFiles/goal_sender.dir/requires: CMakeFiles/goal_sender.dir/main.o.requires

@@ -17,10 +17,15 @@
 #include <ros/ros.h>
 #include <move_base_msgs/MoveBaseAction.h>
 #include <actionlib/client/simple_action_client.h>
-#include "geometry_msgs/Point.h"
-#include "GoalManager.h"
+#include <vector>
 
-#define DEBUG
+#include "geometry_msgs/Point.h"
+#include "std_msgs/String.h"
+#include "goal_sender/DestinationList.h"
+#include "GoalManager.h"
+#include "DestinationManager.h"
+
+#define DEBUG 1
 
 typedef actionlib::SimpleActionClient<move_base_msgs::MoveBaseAction> MoveBaseClient;
 
@@ -41,9 +46,14 @@ void SendNextGoal();
 MoveBaseClient * ac_ptr = NULL;
 
 move_base_msgs::MoveBaseGoal goal;
-GoalManager * manager = NULL;
+
+GoalManager * goal_manager = NULL;
+DestinationManager *destination_manager = NULL;
 
 int ready_for_next_goal = 1;
+
+ros::Publisher unh_destination_pub;
+
 
 /**ACTION CLIENT callback method area
 *
@@ -57,9 +67,9 @@ void doneCb(const actionlib::SimpleClientGoalState& state,
     ROS_INFO("Finished in state [%s]", state.toString().c_str());
   #endif
   
-  manager->RemoveGoal();  
+  goal_manager->RemoveGoal();  
   
-  if(manager->GetGoalCount() > 0)
+  if(goal_manager->GetGoalCount() > 0)
   {
     SendNextGoal(); 
   }
@@ -98,19 +108,62 @@ void unh_goal_callBack( const geometry_msgs::Point::ConstPtr& msg )
               msg->x, msg->y, msg->z );
   #endif
   
-  manager->AddGoal(msg->x, msg->y);
+  goal_manager->AddGoal(msg->x, msg->y);
   
   #ifdef DEBUG
-    ROS_INFO("There are %i goals in the manager", manager->GetGoalCount());
+    ROS_INFO("There are %i goals in the manager", goal_manager->GetGoalCount());
   #endif
     
-  if(manager->GetGoalCount() == 1) {
+  if(goal_manager->GetGoalCount() == 1) {
     SendNextGoal();
   }
 }
 
+void PublishDestinations() 
+{
+  goal_sender::DestinationList msg;
+  
+  std::list<std::string> name_list = destination_manager->GetNames();
+  std::vector<std::string> names;
+
+  for (std::list<std::string>::iterator it = name_list.begin(); it != name_list.end(); it++)
+  {
+    names.push_back((*it));
+  }
+  
+  msg.names = names;
+  
+  std::list<Landmark> landmarks = destination_manager->GetLandmarks();
+  std::vector<geometry_msgs::Point> locations;
+
+  
+  for (std::list<Landmark>::iterator it = landmarks.begin(); it != landmarks.end(); it++)
+  {
+    geometry_msgs::Point msg;
+    msg.x = (*it).x;
+    msg.y = (*it).y;
+    msg.z = 0;
+    
+    locations.push_back(msg);
+  } 
+  
+  msg.locations = locations;
+  
+  unh_destination_pub.publish(msg);
+}
+
+void destination_request(const std_msgs::String::ConstPtr& msg)
+{
+  std::string text = msg->data;
+  #ifdef DEBUG
+    ROS_INFO("Request for destination list: %s", text);
+  #endif
+  
+  PublishDestinations();
+}
+
 void SendNextGoal() {
-    Goal *g = manager->GetNextGoal();
+    Goal *g = goal_manager->GetNextGoal();
     
     #ifdef DEBUG
       ROS_INFO("Sending goal (%f, %f)", g->X(), g->Y());
@@ -140,7 +193,8 @@ void SendNextGoal() {
 int main(int argc, char** argv){
   ros::init(argc, argv, "goal_sender");
   
-  manager = new GoalManager();
+  goal_manager = new GoalManager();
+  destination_manager = new DestinationManager();
   
   ROS_INFO( "Initializing the move_base Action Client..." );
   //tell the action client that we want to spin a thread by default
@@ -155,13 +209,17 @@ int main(int argc, char** argv){
   // subscribe to "unh_goal" which is published on by the web server
   ROS_INFO( "subscribing to the unh_goal topic" );
   ros::NodeHandle unh_goal_node;
-  ros::Subscriber unh_goal_sub = unh_goal_node.subscribe( "unh_robotics/goal", 1000, unh_goal_callBack );
- 
+  ros::Subscriber unh_goal_sub = unh_goal_node.subscribe("unh_robotics/goal", 1000, unh_goal_callBack);
+  ros::Subscriber unh_destination_sub = unh_goal_node.subscribe("unh_robotics/destination_request", 1000, destination_request);
+
+  unh_destination_pub = unh_goal_node.advertise<goal_sender::DestinationList>("unh_robotics/destination_response", 1000);
+  
   // wait and listen for messages
   ROS_INFO( "ros::spin()..." );
   ros::spin();
   
-  delete manager;
+  delete goal_manager;
+  delete destination_manager;
   
   return 0;
 }

@@ -4,8 +4,10 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
+  "/home/virus/fuerte_workspace/sandbox/goal_sender/DestinationManager.cpp" "/home/virus/fuerte_workspace/sandbox/goal_sender/build/CMakeFiles/goal_sender.dir/DestinationManager.o"
   "/home/virus/fuerte_workspace/sandbox/goal_sender/Goal.cpp" "/home/virus/fuerte_workspace/sandbox/goal_sender/build/CMakeFiles/goal_sender.dir/Goal.o"
   "/home/virus/fuerte_workspace/sandbox/goal_sender/GoalManager.cpp" "/home/virus/fuerte_workspace/sandbox/goal_sender/build/CMakeFiles/goal_sender.dir/GoalManager.o"
+  "/home/virus/fuerte_workspace/sandbox/goal_sender/Landmark.cpp" "/home/virus/fuerte_workspace/sandbox/goal_sender/build/CMakeFiles/goal_sender.dir/Landmark.o"
   "/home/virus/fuerte_workspace/sandbox/goal_sender/main.cpp" "/home/virus/fuerte_workspace/sandbox/goal_sender/build/CMakeFiles/goal_sender.dir/main.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")

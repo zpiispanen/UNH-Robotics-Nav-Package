@@ -1,4 +1,9 @@
 FILE(REMOVE_RECURSE
+  "../msg_gen"
+  "../src/goal_sender/msg"
+  "../msg_gen"
+  "CMakeFiles/goal_sender.dir/Landmark.o"
+  "CMakeFiles/goal_sender.dir/DestinationManager.o"
   "CMakeFiles/goal_sender.dir/Goal.o"
   "CMakeFiles/goal_sender.dir/GoalManager.o"
   "CMakeFiles/goal_sender.dir/main.o"

@@ -122,6 +122,19 @@ ROSBUILD_genmsg_lisp/fast:
 .PHONY : ROSBUILD_genmsg_lisp/fast
 
 #=============================================================================
+# Target rules for targets named ROSBUILD_genmsg_py
+
+# Build rule for target.
+ROSBUILD_genmsg_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ROSBUILD_genmsg_py
+.PHONY : ROSBUILD_genmsg_py
+
+# fast build rule for target.
+ROSBUILD_genmsg_py/fast:
+	$(MAKE) -f CMakeFiles/ROSBUILD_genmsg_py.dir/build.make CMakeFiles/ROSBUILD_genmsg_py.dir/build
+.PHONY : ROSBUILD_genmsg_py/fast
+
+#=============================================================================
 # Target rules for targets named ROSBUILD_gensrv_cpp
 
 # Build rule for target.
@@ -211,6 +224,19 @@ rospack_genmsg: cmake_check_build_system
 rospack_genmsg/fast:
 	$(MAKE) -f CMakeFiles/rospack_genmsg.dir/build.make CMakeFiles/rospack_genmsg.dir/build
 .PHONY : rospack_genmsg/fast
+
+#=============================================================================
+# Target rules for targets named rospack_genmsg_all
+
+# Build rule for target.
+rospack_genmsg_all: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rospack_genmsg_all
+.PHONY : rospack_genmsg_all
+
+# fast build rule for target.
+rospack_genmsg_all/fast:
+	$(MAKE) -f CMakeFiles/rospack_genmsg_all.dir/build.make CMakeFiles/rospack_genmsg_all.dir/build
+.PHONY : rospack_genmsg_all/fast
 
 #=============================================================================
 # Target rules for targets named rospack_genmsg_libexe
@@ -304,6 +330,21 @@ tests/fast:
 .PHONY : tests/fast
 
 # target to build an object file
+DestinationManager.o:
+	$(MAKE) -f CMakeFiles/goal_sender.dir/build.make CMakeFiles/goal_sender.dir/DestinationManager.o
+.PHONY : DestinationManager.o
+
+# target to preprocess a source file
+DestinationManager.i:
+	$(MAKE) -f CMakeFiles/goal_sender.dir/build.make CMakeFiles/goal_sender.dir/DestinationManager.i
+.PHONY : DestinationManager.i
+
+# target to generate assembly for a file
+DestinationManager.s:
+	$(MAKE) -f CMakeFiles/goal_sender.dir/build.make CMakeFiles/goal_sender.dir/DestinationManager.s
+.PHONY : DestinationManager.s
+
+# target to build an object file
 Goal.o:
 	$(MAKE) -f CMakeFiles/goal_sender.dir/build.make CMakeFiles/goal_sender.dir/Goal.o
 .PHONY : Goal.o
@@ -334,6 +375,21 @@ GoalManager.s:
 .PHONY : GoalManager.s
 
 # target to build an object file
+Landmark.o:
+	$(MAKE) -f CMakeFiles/goal_sender.dir/build.make CMakeFiles/goal_sender.dir/Landmark.o
+.PHONY : Landmark.o
+
+# target to preprocess a source file
+Landmark.i:
+	$(MAKE) -f CMakeFiles/goal_sender.dir/build.make CMakeFiles/goal_sender.dir/Landmark.i
+.PHONY : Landmark.i
+
+# target to generate assembly for a file
+Landmark.s:
+	$(MAKE) -f CMakeFiles/goal_sender.dir/build.make CMakeFiles/goal_sender.dir/Landmark.s
+.PHONY : Landmark.s
+
+# target to build an object file
 main.o:
 	$(MAKE) -f CMakeFiles/goal_sender.dir/build.make CMakeFiles/goal_sender.dir/main.o
 .PHONY : main.o
@@ -356,6 +412,7 @@ help:
 	@echo "... depend"
 	@echo "... ROSBUILD_genmsg_cpp"
 	@echo "... ROSBUILD_genmsg_lisp"
+	@echo "... ROSBUILD_genmsg_py"
 	@echo "... ROSBUILD_gensrv_cpp"
 	@echo "... ROSBUILD_gensrv_lisp"
 	@echo "... clean-test-results"
@@ -365,6 +422,7 @@ help:
 	@echo "... rosbuild_precompile"
 	@echo "... rosbuild_premsgsrvgen"
 	@echo "... rospack_genmsg"
+	@echo "... rospack_genmsg_all"
 	@echo "... rospack_genmsg_libexe"
 	@echo "... rospack_gensrv"
 	@echo "... test"
@@ -372,12 +430,18 @@ help:
 	@echo "... test-results"
 	@echo "... test-results-run"
 	@echo "... tests"
+	@echo "... DestinationManager.o"
+	@echo "... DestinationManager.i"
+	@echo "... DestinationManager.s"
 	@echo "... Goal.o"
 	@echo "... Goal.i"
 	@echo "... Goal.s"
 	@echo "... GoalManager.o"
 	@echo "... GoalManager.i"
 	@echo "... GoalManager.s"
+	@echo "... Landmark.o"
+	@echo "... Landmark.i"
+	@echo "... Landmark.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
