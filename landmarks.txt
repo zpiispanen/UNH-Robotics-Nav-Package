@@ -1,0 +1,4 @@
+paris 0 1
+london 0 2
+washington 0 3
+gotenburg 0 4
